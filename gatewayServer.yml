@@ -24,6 +24,7 @@ spring:
       discovery:
         locator:
           enabled: true
+          lowercaseServiceId: true
 
 management:
   endpoints:
