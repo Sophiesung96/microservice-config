@@ -1,18 +1,34 @@
 
+
+server:
+  port: 8072
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
 spring:
-  config:
-    import: "optional:configserver:http://localhost:8071/"
+  application:
+    name: gatewayServer
+
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-
   info:
     env:
       enabled: true
@@ -24,21 +40,14 @@ endpoints:
   shutdown:
     enabled: true
 
-eureka:
-  instance:
-    prefer-ip-address: true
-    hostname: localhost
-  client:
-    fetchRegistry: true
-    registerWithEureka: true
-    serviceUrl:
-      defaultZone: http://localhost:8070/eureka/
-
 info:
   app:
-    name: "gatewayServer"
-    description: "Eazy Bank Gateway Server Application"
-    version: "1.0.0"
+    name: gatewayServer
+    description: Eazy Bank Gateway Server Application
+    version: 1.0.0
+
+
+
 
 
 
