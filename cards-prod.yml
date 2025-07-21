@@ -1,8 +1,6 @@
 build:
   version: "3.1"
-spring:
-  config:
-    import: "configserver:http://configserver:8071/"
+
 
 accounts:
   message: "Welcome to EazyBank cards related Production APIs "
