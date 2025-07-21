@@ -9,6 +9,10 @@ accounts:
   onCallSupport:
     - (666) 655-1234
     - (666) 623-1345
+    
+spring:
+  config:
+    import: "configserver:http://configserver:8071/"
 
 
 management:
