@@ -1,6 +1,9 @@
 
 build:
   version: "1.0.0"
+spring:
+  config:
+    import: "configserver:http://configserver:8071/"
 
 management:
   endpoints:
