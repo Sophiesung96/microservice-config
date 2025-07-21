@@ -2,6 +2,11 @@
 build:
   version: "1.0.0"
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
 
 accounts:
   message: "Welcome to EazyBank accounts related webhook III APIs "
