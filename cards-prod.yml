@@ -9,3 +9,10 @@ accounts:
   onCallSupport:
     - (666) 655-1234
     - (666) 623-1345
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
